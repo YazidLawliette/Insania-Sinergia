@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Galeri Kami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body data-aos="fade-down" class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="w-full bg-white shadow-lg z-40 fixed">
+        <div class="container mx-auto flex items-center justify-between px-4">
+            <div class="logo h-6">
+                <img src="./img/inersia.png" alt="logo-insania" class="w-full h-full object-contain">
+            </div>
+            <ul class="hidden md:flex flex-row gap-6 justify-center my-auto">
+              <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="./index.html">Home</a></li>
+              <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="./about.html">About Us</a></li>
+              <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="./service.html">Service</a></li>
+              <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="./gallery.html">Gallery</a></li>
+              <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="./partner.html">Partner</a></li>
+              <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="./info.html">Karir</a><Karir/li>
+              <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="">Kontak</a></li>
+            </ul>
+            <button onclick="openNavbar()" on class="toggle h-16 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-[#025464] cursor-pointer md:hidden" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+                </svg>
+            </button>
+            <button onclick="openLogin ()" class="hidden md:flex w-ful h-fit my-auto px-4 py-1 bg-[#018491] text-white font-medium cursor-pointer rounded-md hover:bg-[#025464]">Log/Sign in</button>
+        </div>
+          
+    </nav>
+  
+    <!-- Asside -->
+  
+    <aside class="w-full h-screen bg-white bg-opacity-90 fixed z-50 md:hidden transition-all duration-200 ease-in-out translate-x-full">
+      <div class="content backdrop-blur h-full flex item-center justify-center relative">
+          <button onclick="closeNavbar()" class="absolute top-3 right-4 z-[99]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-[#018491] "viewBox="0 0 256 256"><path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"></path>
+              </svg>
+          </button>
+        <ul class="flex my-auto flex-col gap-2 text-center">
+          <li><a class="text-xs text-[#018491] font-semibold" href="./index.html">Home</a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="./about.html">About Us</a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="./service.html">Service</a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="./gallery.html">Gallery</a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="./partner.html">Partner/a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="./info.html">Karir</a><Karir/li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="kontak">Kontak</a></li>
+          <button onclick="openLogin ()" class="md:flex w-full h-fit my-auto px-4 py-1 bg-[#018491] text-white font-medium cursor-pointer rounded-md hover:bg-[#025464]">Log/SignIn</button>
+        </ul>
+      </div>
+    </aside>
+
+    <section
+  id="login"
+      class="login w-full h-screen bg-black fixed z-[90] bg-opacity-0 transition-all duration-200 ease-in-out top-0 font-Poppins p-10 translate-y-full"
+    >
+      <div
+        class="container w-full h-full bg-slate-50 rounded-md grid justify-center items-center p-3 gap-4 md:grid-cols-2 md:max-w-[820px] mx-auto md:p-7 relative"
+      >
+        <svg
+          onclick="closeLogin()"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          class="fill-slate-900 absolute w-8 h-8 right-4 top-4 cursor-pointer"
+        >
+          <path
+            d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+          ></path>
+        </svg>
+        <div
+          class="image w-full h-full justify-start items-center hidden md:flex"
+        >
+          <img src="./img/Enter OTP-amico 2.png" alt="" />
+        </div>
+        <div class="container-text">
+          <h1 class="font-semibold text-xl text-slate-700 text-center">
+            sign In
+          </h1>
+          <form action="#" class="mt-10 w-full">
+            <label
+              for="email"
+              class="block text-sm font-medium leading-6 text-gray-900"
+              >Email Address</label
+            >
+            <div class="mt-1"></div>
+            <input
+              id="email"
+              type="text"
+              class="block w-full rounded-full border-0 py-2.5 px-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-xs sm:leading-6"
+            />
+            <div class="mt-3"></div>
+            <label
+              for="Password"
+              class="block text-sm font-medium leading-6 text-gray-900"
+              >Password</label
+            >
+            <div class="mt-1"></div>
+            <input
+              id="Password"
+              type="password"
+              class="block w-full rounded-full border-0 py-2.5 px-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-xs sm:leading-6"
+            />
+          </form>
+          <a href="#" class="text-slate-400 text-xs text-right"
+            >lupa password</a
+          >
+          <div class="button-container mt-10 grid gap-4">
+            <button
+              class="w-full h-full bg-[#018491BF] py-2.5 text-sm text-white rounded-full hover:bg-white hover:text-[#018491BF] hover:border hover:border-[#018491BF] transition-all duration-150"
+            >
+              Sign In
+            </button>
+            <button
+              class="w-full h-full bg-slate-300 py-2.5 text-sm text-slate-500 rounded-full hover:bg-slate-400"
+            >
+              Create New Account
+            </button>
+            <button
+              class="w-full h-full bg-slate-300 py-2.5 text-sm text-slate-500 rounded-full flex justify-center items-center gap-2 hover:bg-slate-400"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="20"
+                height="20"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#FFC107"
+                  d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+                ></path>
+                <path
+                  fill="#FF3D00"
+                  d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+                ></path>
+                <path
+                  fill="#4CAF50"
+                  d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+                ></path>
+                <path
+                  fill="#1976D2"
+                  d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                ></path>
+              </svg>
+              Sign In With Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Gallery Section -->
+    <section class="container mx-auto px-6 py-10">
+        <div class="text-gray-600 mb-8 p-6"></div>
+        <h2 data-aos="fade-down" class="text-4xl font-bold text-gray-800 mb-6 text-center">Galeri Kami</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:grid-rows-4">
+            <img src="./img/Rectangle 102.png" alt="Image 1" class="w-full h-auto shadow-md">
+            <img src="./img/Rectangle 103.png" alt="Image 2" class="w-full h-auto shadow-md md:row-span-2">
+            <img src="./img/Rectangle 104.png" alt="Image 3" class="w-full h-auto shadow-md md:row-span-2">
+            <img src="./img/Rectangle 106.png" alt="Image 5" class="w-full h-auto shadow-md md:row-span-2">
+            <img src="./img/Rectangle 105.png" alt="Image 4" class="w-full h-auto shadow-md">
+            <img src="./img/Rectangle 107.png" alt="Image 6" class="w-full h-auto shadow-md md:row-span-2">
+            <img src="./img/Rectangle 108.png" alt="Image 6" class="w-full h-auto shadow-md">
+            <img src="./img/Rectangle 109.png" alt="Image 6" class="w-full h-auto shadow-md">
+        </div>
+    </section>
+
+    
+    <div class=" py-10 px-6">
+    </div>
+
+
+     <!-- Footer -->
+     <footer id="kontak" class="bg-teal-700 bg-opacity-40 text-white py-8">
+        <div class="container mx-auto px-6 md:px-8 md:flex-col lg:px-16 mr-10">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <img src="./img/inersia.png" alt="Insania Sinergia" class="w-24 mb-8 cursor-pointer">
+                  
+                    <h4>Jl. Perintis Kemerdekaan No.59,<br> Kota Makassar</h4>
+                    <br>
+             
+                    <h4>+6281-2345-6782 <br>insaniasinergia@gmail.com</h4>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h4 class="font-semibold mb-2">Layanan Insania Sinergia</h4>
+                    <ul class="text-sm">
+                        <li class="mb-1"><a href="" class="hover:underline">Jasa Pembukuan</a></li>
+                        <li class="mb-1"><a href="" class="hover:underline">Jasa Pendampingan</a></li>
+                        <li class="mb-1"><a href="" class="hover:underline">Konsultasi Pajak</a></li>
+                        <li class="mb-1"><a href="" class="hover:underline">Pembuatan dan Perubahan akta</a></li>
+                        <li class="mb-1"><a href="" class="hover:underline">Kuasa hukum pengadilan pajak</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h4 class="font-semibold mb-2">Sumber Data</h4>
+                    <ul class="text-sm">
+                        <li class="mb-1"><a href="" class="hover:underline">FAQ</a></li>
+                        <li class="mb-1"><a href="" class="hover:underline">Studi Kasus</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <h4 class="font-semibold mb-2">Company</h4>
+                    <ul class="text-sm">
+                        <li class="mb-1"><a href="" class="hover:underline">About</a></li>
+                        <li class="mb-1"><a href="" class="hover:underline">Contact</a></li>
+                        <li class="mb-1"><a href="" class="hover:underline">Careers</a></li>
+                        <li class="mb-1"><a href="" class="hover:underline">Youtube</a></li>
+                        <li class="mb-1"><a href="" class="hover:underline">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="text-center shadow-lg bg-teal-700 bg-opacity-40 text-white">
+        <p class="text-sm">&copy; 2024 Insania Sinergia. All rights reserved.</p>
+    </div>
+<script>
+    const sidebar = document.querySelector('aside');
+    const login = document.querySelector('#login')
+
+    function openNavbar(){
+        sidebar.classList.add('translate-x-0');
+        sidebar.classList.remove('translate-x-full');
+    }
+
+    function closeNavbar(){
+        sidebar.classList.remove('translate-x-0');
+        sidebar.classList.add('translate-x-full');
+    }
+
+    function openLogin(){
+        login.classList.remove('translate-y-full');
+        login.classList.add('translate-y-0');
+       }
+
+       function closeLogin(){
+        login.classList.remove('translate-y-0');
+        login.classList.add('translate-y-full');
+       }
+</script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insania Sinergia</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./src/output.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body data-aos="fade-down" class="font-Poppins">
+
+    <!-- Navbar -->
+    <nav class="w-full bg-white shadow-lg z-40 fixed">
+      <div class="container mx-auto flex items-center justify-between px-4">
+          <div class="logo h-6">
+              <img src="./img/inersia.png" alt="logo-insania" class="w-full h-full object-contain">
+          </div>
+          <ul class="hidden md:flex flex-row gap-6 justify-center my-auto">
+            <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="#">Home</a></li>
+            <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="./about.html">About Us</a></li>
+            <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="./service.html">Service</a></li>
+            <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="./gallery.html">Gallery</a></li>
+            <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="./partner.html">Partner</a></li>
+            <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="./info.html">Karir</a><Karir/li>
+            <li><a class="text-1xl text-[#025464] font-thin hover:text-slate-300" href="">Kontak</a></li>
+          </ul>
+          <button onclick="openNavbar()" class="toggle h-16 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-[#025464] cursor-pointer md:hidden" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+              </svg>
+          </button>
+          <button onclick="openLogin ()" class="hidden md:flex h-fit my-auto px-4 py-1 bg-[#018491] text-white font-medium cursor-pointer rounded-md hover:bg-[#025464]">Log/Sign in</button>
+      </div>
+        
+  </nav>
+
+  <!-- Asside -->
+
+  <aside class="w-full h-screen bg-white bg-opacity-90 fixed z-50 md:hidden transition-all duration-200 ease-in-out translate-x-full">
+    <div class="content backdrop-blur h-full flex item-center justify-center relative">
+        <button onclick="closeNavbar()" class="absolute top-3 right-4 z-[99]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-[#018491] "viewBox="0 0 256 256"><path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"></path>
+            </svg>
+        </button>
+      <ul class="flex my-auto flex-col gap-2 text-center">
+        <li><a class="text-xs text-[#018491] font-semibold" href="./index.html">Home</a></li>
+        <li><a class="text-xs text-[#018491] font-semibold" href="./about.html">About Us</a></li>
+        <li><a class="text-xs text-[#018491] font-semibold" href="./service.html">Service</a></li>
+        <li><a class="text-xs text-[#018491] font-semibold" href="./gallery.html">Gallery</a></li>
+        <li><a class="text-xs text-[#018491] font-semibold" href="./partner.html">Partner</li>
+        <li><a class="text-xs text-[#018491] font-semibold" href="./info.html">Karir</a><Karir/li>
+        <li><a class="text-xs text-[#018491] font-semibold" href="kontak">Kontak</a></li>
+        <button onclick="openLogin ()" class="md:flex w-full h-fit my-auto px-4 py-1 bg-[#018491] text-white font-medium cursor-pointer rounded-md hover:bg-[#025464]">Log/Sign in</button>
+      </ul>
+    </div>
+  </aside>
+
+  <section
+  id="login"
+      class="login w-full h-screen bg-black fixed z-[90] bg-opacity-0 transition-all duration-200 ease-in-out top-0 font-Poppins p-10 translate-y-full"
+    >
+      <div
+        class="container w-full h-full bg-slate-50 rounded-md grid justify-center items-center p-3 gap-4 md:grid-cols-2 md:max-w-[820px] mx-auto md:p-7 relative"
+      >
+        <svg
+          onclick="closeLogin()"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          class="fill-slate-900 absolute w-8 h-8 right-4 top-4 cursor-pointer"
+        >
+          <path
+            d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+          ></path>
+        </svg>
+        <div
+          class="image w-full h-full justify-start items-center hidden md:flex"
+        >
+          <img src="./img/Enter OTP-amico 2.png" alt="" />
+        </div>
+        <div class="container-text">
+          <h1 class="font-semibold text-xl text-slate-700 text-center">
+            sign In
+          </h1>
+          <form action="#" class="mt-10 w-full">
+            <label
+              for="email"
+              class="block text-sm font-medium leading-6 text-gray-900"
+              >Email Address</label
+            >
+            <div class="mt-1"></div>
+            <input
+              id="email"
+              type="text"
+              class="block w-full rounded-full border-0 py-2.5 px-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-xs sm:leading-6"
+            />
+            <div class="mt-3"></div>
+            <label
+              for="Password"
+              class="block text-sm font-medium leading-6 text-gray-900"
+              >Password</label
+            >
+            <div class="mt-1"></div>
+            <input
+              id="Password"
+              type="password"
+              class="block w-full rounded-full border-0 py-2.5 px-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-xs sm:leading-6"
+            />
+          </form>
+          <a href="#" class="text-slate-400 text-xs text-right"
+            >lupa password</a
+          >
+          <div class="button-container mt-10 grid gap-4">
+            <button
+              class="w-full h-full bg-[#018491BF] py-2.5 text-sm text-white rounded-full hover:bg-white hover:text-[#018491BF] hover:border hover:border-[#018491BF] transition-all duration-150"
+            >
+              Sign In
+            </button>
+            <button
+              class="w-full h-full bg-slate-300 py-2.5 text-sm text-slate-500 rounded-full hover:bg-slate-400"
+            >
+              Create New Account
+            </button>
+            <button
+              class="w-full h-full bg-slate-300 py-2.5 text-sm text-slate-500 rounded-full flex justify-center items-center gap-2 hover:bg-slate-400"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="20"
+                height="20"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#FFC107"
+                  d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+                ></path>
+                <path
+                  fill="#FF3D00"
+                  d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+                ></path>
+                <path
+                  fill="#4CAF50"
+                  d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+                ></path>
+                <path
+                  fill="#1976D2"
+                  d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                ></path>
+              </svg>
+              Sign In With Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-[#025464] bg-opacity-40">
+      <div class="container mx-auto flex flex-col-reverse md:flex-row gap-3 px-4 py-10 items-center">
+          <div class="title h-full w-full flex flex-col gap-2">
+              <h2 class="text-sm md:text-2xl lg:text-6xl text-white font-bold">Selamat Datang di <br> Insania Sinergia</h2>
+              <p class="text-xs text-white font-medium">Penyedia  Jasa Konsultasi dan  rekomendasi terbaik <br> terkait rencana bisnis maupun permasalahan bisnis <br> yang tengah dihadapi.</p>
+              <button class="bg-white text-xs text-[#018491] rounded font-semibold py-1 px-2 w-fit">Segera Atur Jadwal Konsultasi Anda</button>
+          </div>
+          <div class="hero-image py-4  h-1/2 w-1/2">
+              <img src="./img/home.png" alt="" class="w-full h-full">
+          </div>
+      </div>
+  </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="container mx-auto px-4 py-16 text-end">
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+                <img src="./img/Group 10.png" alt="About Us Image 1" class="rounded-lg shadow-lg w-full">
+            </div>
+            <div class="w-full md:w-1/2 px-4">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tentang Kami</h2>
+                <p class="text-gray-700 mb-6">Jasa kami mencakup bantuan nasihat bisnis, bimbingan dan operasional berbagai fungsi manajemen bisnis, konsultasi manajemen olah agronomist dan agricultural economis pada bidang pertanian...</p>
+                <a href="#" class="bg-teal-500 text-white px-6 py-3 rounded-md">Tampilkan Lebih Banyak</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="whywe" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Mengapa Harus Kami?</h2>
+            <div class="flex flex-wrap -mx-4">
+                <div data-aos="fade-up" class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-black">
+                        <div class="text-teal-500 mb-4 flex justify-center">
+                            <img src="./img/Group 11.png" class="rounded-md shadow-md" alt="">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pandangan Objektif</h3>
+                        <p class="text-gray-700">Konsultan bisnis dapat memberi pandangan pihak ketiga tentang bisnis yang dijalankan. Dengan melakukan evaluasi operasi yang jujur...</p>
+                    </div>
+                </div>
+                <div data-aos="fade-down" class="w-full md:w-1/3 px-4 mb-8 md:h-[420px]">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-black">
+                        <div class="text-teal-500 mb-4 flex justify-center">
+                            <img src="./img/Group 12.png" class="rounded-md shadow-md" alt="">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Branding Layanan</h3>
+                        <p class="text-gray-700">Kami memberikan banyak informasi tentang bagaimana memasarkan produk dan bagaimana menggunakan branding...</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-black">
+                        <div class="text-teal-500 mb-4 flex justify-center">
+                            <img src="./img/Group 13.png" class="rounded-md shadow-md" alt="">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Menghemat Uang dan Waktu</h3>
+                        <p class="text-gray-700">Mengandalkan teknik trial and error untuk <br> bergerak maju. Namun ini bisa menjadi cara belajar yang mahal...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="service" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-gray-800 text-start mb-8">Pelayanan Kami</h2>
+        <div class="flex flex-wrap -mx-4">
+            <div  data-aos="fade-up-right" class="w-full md:w-1/3 px-4 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center border border-black">
+                    <img src="./img/amico-1.png" alt="E-Faktur Jasa" class="w-24 h-24 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">E-Faktur Jasa</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up-left" class="w-full md:w-1/3 px-4 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center border border-black">
+                    <img src="./img/amico-2.png" alt="Pendaftaran PT" class="w-24 h-24 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Pendaftaran PT</h3>
+                </div>
+            </div>
+            <div  data-aos="fade-down-right" class="w-full md:w-1/3 px-4 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center border border-black">
+                    <img src="./img/amico-3 (1).png" alt="Jasa Pembukuan" class="w-24 h-24 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Jasa Pembukuan</h3>
+                </div>
+            </div>
+            <div  data-aos="fade-down-left" class="w-full md:w-1/3 px-4 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center border border-black">
+                    <img src="./img/amico-4.png" alt="Penutupan PT" class="w-24 h-24 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Penutupan PT</h3>
+                </div>
+            </div>
+            <div data-aos="fade-down-right" class="w-full md:w-1/3 px-4 mb-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center border border-black">
+                  <img src="./img/amico-3 (1).png" alt="Jasa Pembukuan" class="w-24 h-24 mx-auto mb-4">
+                  <h3 class="text-xl font-bold text-gray-800 mb-2">Jasa Pembukuan</h3>
+              </div>
+          </div>
+            <div data-aos="fade-down-left"   class="w-full md:w-1/3 px-4 mb-8">
+                <div class="bg-white p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Selengkapnya...</h3>
+                    <img src="./img/Group 14.png" alt="Selengkapnya" class="w-24 h-24 mx-auto mb- cursor-pointer">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2"></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-teal-700 bg-opacity-40 text-white py-8">
+            <div class="container mx-auto px-6 md:px-8 md:flex-col lg:px-16 mr-10">
+                <div class="flex flex-wrap justify-between">
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <img src="./img/inersia.png" alt="Insania Sinergia" class="w-24 mb-8 cursor-pointer">
+                      
+                        <h4>Jl. Perintis Kemerdekaan No.59,<br> Kota Makassar</h4>
+                        <br>
+                 
+                        <h4>+6281-2345-6782 <br>insaniasinergia@gmail.com</h4>
+                    </div>
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h4 class="font-semibold mb-2">Layanan Insania Sinergia</h4>
+                        <ul class="text-sm">
+                            <li class="mb-1"><a href="" class="hover:underline">Jasa Pembukuan</a></li>
+                            <li class="mb-1"><a href="" class="hover:underline">Jasa Pendampingan</a></li>
+                            <li class="mb-1"><a href="" class="hover:underline">Konsultasi Pajak</a></li>
+                            <li class="mb-1"><a href="" class="hover:underline">Pembuatan dan Perubahan akta</a></li>
+                            <li class="mb-1"><a href="" class="hover:underline">Kuasa hukum pengadilan pajak</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h4 class="font-semibold mb-2">Sumber Data</h4>
+                        <ul class="text-sm">
+                            <li class="mb-1"><a href="" class="hover:underline">FAQ</a></li>
+                            <li class="mb-1"><a href="" class="hover:underline">Studi Kasus</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/4">
+                        <h4 class="font-semibold mb-2">Company</h4>
+                        <ul class="text-sm">
+                            <li class="mb-1"><a href="" class="hover:underline">About</a></li>
+                            <li class="mb-1"><a href="" class="hover:underline">Contact</a></li>
+                            <li class="mb-1"><a href="" class="hover:underline">Careers</a></li>
+                            <li class="mb-1"><a href="" class="hover:underline">Youtube</a></li>
+                            <li class="mb-1"><a href="" class="hover:underline">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="text-center shadow-lg bg-teal-700 bg-opacity-40 text-white">
+            <p class="text-sm">&copy; 2024 Insania Sinergia. All rights reserved.</p>
+        </div>
+    <script>
+        const sidebar = document.querySelector('aside');
+        const login = document.querySelector('#login');
+
+        function openNavbar(){
+            sidebar.classList.add('translate-x-0');
+            sidebar.classList.remove('translate-x-full');
+        }
+
+        function closeNavbar(){
+            sidebar.classList.remove('translate-x-0');
+            sidebar.classList.add('translate-x-full');
+        }
+
+       function openLogin(){
+         login.classList.remove('translate-y-full');
+        login.classList.add('translate-y-0');
+       }
+
+       function closeLogin(){
+        login.classList.remove('translate-y-0');
+        login.classList.add('translate-y-full');
+       }
+
+    </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
